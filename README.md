@@ -10,6 +10,21 @@ KERNFUNKTIONEN:
 - Fahrzeugrückname:Bei Rückgabe werden Kilometerstand, Fahrzeugzustand und Unterschrift digital erfasst und ein Rücknahmeprotokoll generiert.
 - Rechnungstellung und Mahnwesen: Automatisierte Erstellung von Einzel- oder Sammelrechnungen mit Mahnstufen bei Zahlungsverzug.
 
+TECHNOLOGIESTACK:
+-Backend: Spring Boot
+REST-API für Reservierung, Vertrag, Abrechnung und Datenbankanbindung.
+-Frontend: React.js
+Benutzerfreundliche Web-Oberfläche für Kunden und Mitarbeiter.
+-Datenbank: MySQL
+Speicherung aller Mietvorgänge, Kunden- und Fahrzeugdaten.
+-Cloud/Deployment: Render
+Kostenlose Hosting-Lösung für Backend + Frontend (einfach zu bedienen).
+-Versionkontrolle: GitHub
+Kollaborative Entwicklung mit Branching-Strategie
+-Projektmanagement: Trello
+Agile Aufgabenverteilung mit Swimlanes
+
+
 BESONDERHEITEN:
 -24/7-Verfügbarkeit für Kunden.
 -Automatisierung spart Kosten und reduziert Fehler.
