@@ -90,3 +90,33 @@ Beim nächsten Mal:
 - Setup-Anleitung für alle Teammitglieder vorab erstellen .
 Meilensteine (M2–M7) direkt im Board anlegen, auch wenn sie noch nicht bearbeitet werden.
 KI nicht blind vertrauen – immer eigene Recherche parallel durchführen.
+
+Entscheidungsmatrix
+
+| Kriterium                             | Spring Boot | Django  | .NET Core |
+| ------------------------------------- | ----------- | ------- | --------- |
+| Sprache                               | Java        | Python  | C#        |
+| Lernkurve                             | Mittel      | Einfach | Mittel    |
+| Gute Eignung für Business-Anwendungen | Sehr gut    | Gut     | Sehr gut  |
+| Datenbankintegration                  | Sehr gut    | Gut     | Sehr gut  |
+| Community / Tutorials                 | Sehr groß   | Groß    | Groß      |
+| PDF / REST API Unterstützung          | Sehr gut    | Gut     | Sehr gut  |
+| Hochschulumfeld geeignet              | Sehr gut    | Gut     | Gut       |
+| Gesamtbewertung                       | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐|
+
+Für die Umsetzung des Projekts wurde ein Technologiestack bestehend aus React, Spring Boot und MySQL ausgewählt. Ziel war es, 
+Technologien zu verwenden, die sowohl für webbasierte Geschäftsanwendungen geeignet als auch innerhalb der Projektlaufzeit 
+realistisch umsetzbar sind.
+
+React wurde für die Entwicklung des Frontends gewählt, da damit moderne und benutzerfreundliche Oberflächen effizient umgesetzt 
+werden können. Besonders die komponentenbasierte Struktur erleichtert die Wiederverwendbarkeit und Wartbarkeit der Benutzeroberfläche.
+
+Im Backend fiel die Entscheidung auf Spring Boot, da das Framework im Bereich der Unternehmensanwendungen weit verbreitet ist und eine
+gute Unterstützung für REST-Schnittstellen, Datenbankzugriffe und Sicherheitsmechanismen bietet. Zudem existiert umfangreiche 
+Dokumentation sowie eine große Entwickler-Community.
+
+Als Datenbank wurde MySQL eingesetzt, da die Anwendung stark strukturierte Daten wie Kunden, Reservierungen, Fahrzeuge und Rechnungen 
+verarbeitet. Relationale Datenbanken eignen sich besonders gut für solche Geschäftsprozesse.
+
+Insgesamt bietet der gewählte Stack eine gute Balance zwischen Skalierbarkeit, Lernaufwand und praktischer Umsetzbarkeit im Hochschulprojekt.
+
