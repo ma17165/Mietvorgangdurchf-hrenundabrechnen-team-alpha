@@ -31,3 +31,5 @@ BESONDERHEITEN:
 -KI-Unterstützung bei Recherche, Code-Generierung und Dokumentation.
 -Sicherheit: Authentifizierung mit Sperrmechanismus nach 3 Fehlversuchen.
 
+Figma link: https://www.figma.com/design/pINa25RcJ7kXoOSghkel03/B4_Abrechnung_Rechnung?node-id=0-1&p=f&t=g2bR16tsqZlOr4wn-0
+
