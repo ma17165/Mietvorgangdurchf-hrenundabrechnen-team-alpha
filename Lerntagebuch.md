@@ -115,6 +115,25 @@ Im Backend fiel die Entscheidung auf Spring Boot, da das Framework im Bereich de
 gute Unterstützung für REST-Schnittstellen, Datenbankzugriffe und Sicherheitsmechanismen bietet. Zudem existiert umfangreiche 
 Dokumentation sowie eine große Entwickler-Community.
 
+Meilenstein 2 (UI-Design / Interaktionsmuster)
+### 1. Designentscheidungs-Notiz 
+Für das UI-Design der Autovermietung wurde ein konsistentes Dark-Mode-Layout (Anthrazit/Dunkelgrau) mit signalstarken orangefarbenen Akzenten gewählt. Dieses Farbmuster sorgt für einen modernen, dynamischen Look (Anlehnung an bekannte Sharing-Dienste) und bietet einen hohen visuellen Kontrast für die Barrierefreiheit. 
+
+Bei den UX-Mustern haben wir sich strikt an etablierte Industriestandards gehalten: Die Login-Maske (B1) nutzt klare Input-Validierungen und platziert Fehlermeldungen direkt im Sichtfeld, um Frustration zu vermeiden. Die Fahrzeugauswahl (B1) basiert auf einem übersichtlichen Card-Layout mit Filter-Tabs am oberen Rand, was eine intuitive und schnelle Navigation ermöglicht. Für das Mitarbeiter-Dashboard (B2/B3) wurde ein kompaktes Formular-Muster mit klar beschrifteten Kontrollkästchen (Checkboxen) gewählt, um Fehleingaben im stressigen Stationsalltag zu minimieren. Die Abrechnungsseite (B4) setzt auf ein klares, tabellarisches Muster, das geschäftliche Pflichtangaben (wie die 19% MwSt.) sofort ersichtlich macht.
+
+---
+
+### 2. Lerntagebuch-Eintrag (M2)
+
+| Kategorie | Inhalt |
+
+| **Motivation** | Uns interessiert am UI/UX-Design besonders die Schnittstelle zwischen Ästhetik und Funktionalität. Apps wie Spotify oder moderne Banking-Apps empfinden wir als intuitiv, weil sie den Nutzer ohne visuelle Ablenkung (Clean Design) ans Ziel führen. Das wollten wir auch für unsere Autovermietung umsetzen. |
+| **Eigene Vorkenntnisse** | Wir hatten minimale Vorkenntnisse in Figma, aber Konzepte wie "User Flows", "Wireframes" oder komponentenbasiertes Design waren für uns in der praktischen Umsetzung neu. |
+| **Vorgehen & Entscheidungen** | Wir haben die User Stories analysiert und die Screens funktional aufgeteilt. Statt alles händisch zu zeichnen, haben wir v0.dev genutzt. Durch gezieltes Prompting (z.B. „Erstelle eine moderne Fahrzeugauswahl...“) haben wir Layouts generiert. Die Entwürfe haben wir per Screenshot in Figma importiert, dort als Designsystem organisiert und final als PNG exportiert. |
+| **Was hat gut / nicht geklappt** | Das Generieren der Grund-Layouts mit der KI lief extrem schnell und zeiteffizient. Schwieriger war die Feinabstimmung: v0 hat Anpassungen manchmal als Unterseiten (wie /fahrzeuge) angelegt oder Bezeichnungen (z.B. „E-Mail“ statt „Kundennummer“) vertauscht. Hier mussten wir durch präzise Folge-Prompts manuell nachbessern. |
+| **Noch offen** | Alle Kern-Screens (B1 bis B4) sind vollständig umgesetzt. In der nächsten Phase (Implementierung) müssen wir darauf achten, die Formular-Validierungen (z.B. Fehlermeldung bei falschem Passwort) auch im echten Code exakt so dynamisch wie im Design darzustellen. |
+| **Eigenreflexion** | Der frühzeitige Prototyp hat uns massiv verbessert. Das spart uns später beim Coden viele Diskussionen. |
+
 Als Datenbank wurde MySQL eingesetzt, da die Anwendung stark strukturierte Daten wie Kunden, Reservierungen, Fahrzeuge und Rechnungen 
 verarbeitet. Relationale Datenbanken eignen sich besonders gut für solche Geschäftsprozesse.
 
