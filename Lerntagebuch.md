@@ -167,3 +167,17 @@ Unser relationales Datenbankschema wurde streng auf Basis des vom Ihnen bereitge
 | **Noch offen** | Das Datenbankschema und die Testdaten sind komplett fertig und einsatzbereit. Als nächstes müssen wir die MySQL-Datenbank lokal in XAMPP importieren und die PHP-Schnittstellen für das Backend vorbereiten. |
 | **Eigenreflexion** | Durch den exakten Abgleich mit Ihrem Diagramm haben wir gelernt, wie wichtig präzise Vorgaben in der Softwarearchitektur sind. Jedes Attribut, das wir jetzt angelegt haben, korrespondiert perfekt mit den Eingabefeldern unserer UI-Screens aus M2. Das gibt uns enorme Sicherheit für die bevorstehende Programmierphase. |
 
+
+## Meilenstein 4 (Front-End Entwicklung)
+
+### Lerntagebuch-Eintrag (M4)
+
+| Kategorie | Inhalt |
+| :--- | :--- |
+| **Motivation** | Es war extrem motivierend zu sehen, wie aus den statischen UI-Designs aus M2 und der Datenstruktur aus M3 nun ein echtes, interaktives Produkt im Browser wird. Das direkte Feedback bei erfolgreichen Eingaben oder Validierungsfehlern hat dem Projekt richtig Leben eingehaucht. |
+| **Eigene Vorkenntnisse** | HTML und grundlegendes CSS waren uns geläufig. Die komponentenbasierte Entwicklung in React und die Nutzung von Tailwind CSS über Utility-Klassen waren für uns jedoch neu und eine sehr lehrreiche Erfahrung. |
+| **Vorgehen & Entscheidungen** | Wir haben uns für ein React-Vite-Setup entschieden, um eine schnelle, modulare Applikation zu bauen. Die Screens wurden in separate Komponenten ausgelagert (`LoginScreen`, `VehicleSelectScreen`, etc.). Das Routing haben wir über ein zustandsbasiertes State-Management gelöst, um Ihnen ein nahtloses Durchklicken ohne Server-Setup zu ermöglichen. KI-Tools wie v0.dev halfen uns beim schnellen Generieren der Tailwind-Grundlayouts. |
+| **Was hat gut / nicht geklappt** | Das Erstellen der Layouts und das Einbinden der Mockdaten verliefen reibungslos, da die Tabellenstruktur aus M3 perfekt vorbereitet war. Herausfordernder war die clientseitige Validierung von Logik-Fehlern – beispielsweise zu verhindern, dass ein Mitarbeiter ein Auto mit einem niedrigeren Kilometerstand zurücknimmt, als es abgeholt wurde. Das konnten wir über JavaScript-Plausibilitätsprüfungen lösen. |
+| **Noch offen** | Das Front-End läuft lokal und im Mockup-Modus perfekt. Als nächstes steht der große Meilenstein 5 an: Die Anbindung des PHP-Backends an unsere MySQL-Datenbank, um die echten Formulardaten zu speichern. |
+| **Eigenreflexion** | Die KI-Unterstützung durch v0.dev hat unsere Entwicklungsgeschwindigkeit enorm beschleunigt. Wir verstehen den generierten Code durch die saubere Aufteilung in React-Komponenten vollkommen. Für uns als angehende Wirtschaftsinformatiker zeigt dieser Meilenstein perfekt, wie wichtig die Verzahnung von UI/UX-Design und Programmierlogik ist. |
+
