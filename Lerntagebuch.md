@@ -139,3 +139,31 @@ verarbeitet. Relationale Datenbanken eignen sich besonders gut für solche Gesch
 
 Insgesamt bietet der gewählte Stack eine gute Balance zwischen Skalierbarkeit, Lernaufwand und praktischer Umsetzbarkeit im Hochschulprojekt.
 
+
+## Meilenstein 3 (Datenbankschema & Datenbasis)
+
+### 1. Dokumentation der Designentscheidungen & Normalisierung
+Unser relationales Datenbankschema wurde streng auf Basis des vom Ihnen bereitgestellten Klassendiagramms entworfen und vollständig in die **3. Normalform (3NF)** überführt. 
+
+* **1. Normalform (1NF):** Alle Attribute sind atomar (z.B. Aufteilung von Name in `vorname` und `nachname`; Adressen in der Tabelle `Mietstation` wurden in `strasse`, `plz` und `ort` zerlegt). Es gibt keine Mehrfachwerte oder Wiederholungsgruppen.
+* **2. Normalform (2NF):** Die Tabellen befinden sich in der 1NF und jedes Nicht-Primärattribut ist voll funktionell abhängig vom gesamten Primärschlüssel. Da wir durchgehend künstliche, eindeutige Auto-Increment-IDs als Primärschlüssel nutzen (`kundenNr`, `vertragsNr`, etc.), ist diese Bedingung inhärent erfüllt.
+* **3. Normalform (3NF):** Es existieren keine transitiven Abhängigkeiten. Nicht-Primärattribute hängen direkt und ausschließlich vom Primärschlüssel ab (z. B. wurden Berechnungen für Rechnungsbeträge wie Netto, MwSt. und Brutto sauber getrennt und hängen direkt an der `rechnungsNr`).
+
+#### Beziehungstypen (Kardinalitäten):
+* **Kunde zu Mietvertrag (1:N):** Ein Kunde kann im Laufe der Zeit viele Mietverträge abschließen, ein konkreter Mietvertrag gehört jedoch immer exakt zu einem Kunden.
+* **Kfz zu Mietvertrag (1:N):** Ein Fahrzeug kann nacheinander für mehrere Mietverträge gebucht werden, aber zu einem spezifischen Zeitraum ist es genau einem Vertrag zugeordnet.
+* **Mietstation zu Mietvertrag (1:N):** Eine Station kann als Abhol- oder Rückgabeort für beliebig viele Verträge dienen.
+
+---
+
+### 2. Lerntagebuch-Eintrag (M3)
+
+| Kategorie | Inhalt |
+| :--- | :--- |
+| **Motivation** | Die saubere Strukturierung von Daten im Backend ist das Fundament jeder stabilen Anwendung. Uns hat besonders motiviert, die abstrakten Klassenbeziehungen aus dem Entwurf in logische Tabellenstrukturen mit funktionierenden Fremdschlüsseln (Foreign Keys) zu übersetzen, um Dateninkonsistenzen im späteren Betrieb zu verhindern. |
+| **Eigene Vorkenntnisse** | Grundbegriffe wie SQL, Primärschlüssel und `CREATE TABLE` waren theoretisch bekannt. Die praktische Verknüpfung komplexer Tabellen über relationale Integritätsregeln (`ON DELETE RESTRICT` / `ON DELETE CASCADE`) im Team abzustimmen, war jedoch eine neue Erfahrung. |
+| **Vorgehen & Entscheidungen** | Wir haben das vorgegebene Klassendiagramm exakt analysiert und die Tabellennamen sowie Attribute präzise übernommen. Das Schema wurde in die Stammdaten (`Kunde`, `Mitarbeiter`, `Kfz`, `Mietstation`) und Bewegungshistorie (`Mietvertrag`, `Rechnung`) unterteilt. Für die Datenbasis haben wir eine `seed.sql` mit logisch zusammenhängenden Testdaten geschrieben, um alle typischen Geschäftsfälle (Reserviert, Laufend, Beendet) direkt abbilden zu können. |
+| **Was hat gut / nicht geklappt** | Das Erstellen der SQL-Dateien verlief sehr geradlinig. Eine Herausforderung war die korrekte Reihenfolge der `CREATE TABLE`-Befehle in der `schema.sql`: Da Tabellen wie `Mietvertrag` auf `Kunde` und `Kfz` verweisen, mussten die Stammdaten zwingend zuerst angelegt werden. Hier kam es anfangs zu Fehlern bei den Fremdschlüssel-Referenzen, die wir durch Umsortieren gelöst haben. |
+| **Noch offen** | Das Datenbankschema und die Testdaten sind komplett fertig und einsatzbereit. Als nächstes müssen wir die MySQL-Datenbank lokal in XAMPP importieren und die PHP-Schnittstellen für das Backend vorbereiten. |
+| **Eigenreflexion** | Durch den exakten Abgleich mit Ihrem Diagramm haben wir gelernt, wie wichtig präzise Vorgaben in der Softwarearchitektur sind. Jedes Attribut, das wir jetzt angelegt haben, korrespondiert perfekt mit den Eingabefeldern unserer UI-Screens aus M2. Das gibt uns enorme Sicherheit für die bevorstehende Programmierphase. |
+
