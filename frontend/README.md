@@ -43,5 +43,5 @@ Befolgen Sie diese Schritte, um den Front-End-Prototypen lokal auf Ihrem System 
 
 1. **Repository klonen oder Ordner herunterladen:**
 ```bash
-   git clone [HIER_REPOSITROY_URL_EINFÜGEN]
+   git clone https://github.com/ma17165/Mietvorgangdurchf-hrenundabrechnen-team-alpha 
    cd [PROJEKT_ORDNER]/frontend
