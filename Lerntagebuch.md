@@ -181,3 +181,16 @@ Unser relationales Datenbankschema wurde streng auf Basis des vom Ihnen bereitge
 | **Noch offen** | Das Front-End läuft lokal und im Mockup-Modus perfekt. Als nächstes steht der große Meilenstein 5 an: Die Anbindung des PHP-Backends an unsere MySQL-Datenbank, um die echten Formulardaten zu speichern. |
 | **Eigenreflexion** | Die KI-Unterstützung durch v0.dev hat unsere Entwicklungsgeschwindigkeit enorm beschleunigt. Wir verstehen den generierten Code durch die saubere Aufteilung in React-Komponenten vollkommen. Für uns als angehende Wirtschaftsinformatiker zeigt dieser Meilenstein perfekt, wie wichtig die Verzahnung von UI/UX-Design und Programmierlogik ist. |
 
+
+## Meilenstein 5 (Back-End Entwicklung & API)
+
+### Lerntagebuch-Eintrag (M5)
+
+| Kategorie | Inhalt |
+| :--- | :--- |
+| **Motivation** | Es war extrem motivierend zu sehen, wie schnell sich mit FastAPI aus dem Stand ein funktionierendes Backend aufbauen lässt. Der Moment, als die interaktive Swagger-UI automatisch generiert wurde und ich den ersten Login-Schnittstellentest live im Browser ausführen konnte, hat mir gezeigt, wie nah ich an einem echten Full-Stack-Produkt bin. |
+| **Eigene Vorkenntnisse** | Grundlegende Python-Kenntnisse und das theoretische Konzept des Schichtenmodells (Controller/Service/Repository) aus der Vorlesung  waren vorhanden. Die konkrete Umsetzung einer asynchronen API mit FastAPI und das Handling von CORS-Middlewares für die Frontend-Kommunikation waren für mich jedoch neu und eine sehr lehrreiche Erfahrung. |
+| **Vorgehen & Entscheidungen** | Ich habe mich für ein FastAPI-Setup in Kombination mit Uvicorn entschieden, um eine performante und automatisch dokumentierte API zu erhalten. Die Endpunkte wurden nach Funktionen getrennt in separate Router-Dateien (`auth.py`, `vehicles.py`, `rentals.py`) im Ordner `/routers` ausgelagert. Zudem habe ich eine CORS-Middleware integriert, um die Cross-Origin-Kommunikation mit meinem React-Frontend abzusichern. |
+| **Was hat gut / nicht geklappt** | Die automatische Generierung der OpenAPI-Schnittstelle und die serverseitige Live-Abrechnungskalkulation (19% MwSt.) funktionierten auf Anhieb reibungslos. Zu Beginn gab es einen kleinen `ImportError` in der `main.py`, weil eine Router-Datei im Dateisystem vergessen wurde. Außerdem blockierte die Windows-PowerShell kurzzeitig den Start des Frontend-Parallelbetriebs über Skript-Restriktionen (`PSSecurityException`). Beide Probleme konnten wir durch eine strukturierte Explorer-Prüfung und den Wechsel auf die klassische Eingabeaufforderung (CMD) zügig lösen. |
+| **Noch offen** | Die Endpunkte laufen derzeit noch mit realistischen Mock-Daten (In-Memory). Als nächstes steht die persistente Anbindung der Routen an eine echte relationale Datenbank im Ordner `/db` an, um die simulierten Fahrzeug- und Mietdaten durch echte Tabelleneinträge zu ersetzen und den Full-Stack-Mietprozess final abzurunden. |
+
