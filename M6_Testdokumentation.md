@@ -3,38 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M6 Testdokumentation Kopier-Tool</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body class="bg-gradient-to-br from-slate-100 to-blue-50 min-h-screen p-4 flex flex-col items-center justify-center font-sans">
-
-    <div class="bg-white rounded-2xl shadow-xl border border-slate-200 p-8 max-w-2xl w-full text-center">
-        <!-- Header -->
-        <div class="flex items-center justify-center w-16 h-16 bg-blue-100 text-blue-600 rounded-full mx-auto mb-4">
-            <i class="fa-solid fa-clipboard-list text-2xl"></i>
-        </div>
-        
-        <h1 class="text-2xl font-bold text-slate-800 mb-2">M6 Testdokumentation</h1>
-        <p class="text-slate-500 mb-6">Kopiere die vollständige, fehlerfreie Markdown-Datei für dein GitHub-Repository mit nur einem Klick.</p>
-
-        <!-- Main Copy Button -->
-        <button id="copy-btn" class="w-full bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white font-semibold py-4 px-6 rounded-xl shadow-lg transition-all transform active:scale-[0.98] flex items-center justify-center gap-3 text-lg">
-            <i class="fa-solid fa-copy"></i>
-            <span>In die Zwischenablage kopieren</span>
-        </button>
-
-        <!-- Success Toast (Hidden by default) -->
-        <div id="toast" class="hidden mt-4 p-3 bg-green-50 border border-green-200 text-green-700 rounded-lg flex items-center justify-center gap-2 animate-bounce">
-            <i class="fa-solid fa-circle-check"></i>
-            <span class="font-medium">Erfolgreich kopiert! Du kannst es jetzt bei GitHub einfügen.</span>
-        </div>
-
-        <!-- Fallback Textarea in case Clipboard API fails -->
-        <div class="mt-8 text-left">
-            <label class="block text-sm font-semibold text-slate-600 mb-2">Sollte der Button nicht funktionieren (Alternativer Textbereich):</label>
-            <p class="text-xs text-slate-400 mb-2">Klicke in das Feld unten, drücke <kbd class="px-1.5 py-0.5 bg-slate-100 border border-slate-300 rounded shadow-sm text-slate-600">Strg + A</kbd> und dann <kbd class="px-1.5 py-0.5 bg-slate-100 border border-slate-300 rounded shadow-sm text-slate-600">Strg + C</kbd>.</p>
-            <textarea id="markdown-textarea" readonly class="w-full h-48 p-3 bg-slate-50 border border-slate-200 rounded-lg text-xs font-mono text-slate-600 focus:outline-none focus:ring-2 focus:ring-blue-500"># M6: Modul-, Integrations- und Systemtest (Team Alpha)
+    
 
 Dieses Dokument enthält die vollständige Testdokumentation für die Web-Applikation „Mietvorgang durchführen und abrechnen“ gemäß den Vorgaben für Meilenstein 6.
 
