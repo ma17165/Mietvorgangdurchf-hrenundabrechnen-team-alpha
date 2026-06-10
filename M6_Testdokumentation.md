@@ -114,43 +114,6 @@ Während der Entwicklungs- und Testphase sind folgende Fehler aufgetreten. Diese
 | **BUG-01** | **ImportError in `main.py`:** Das Backend stürzte direkt beim Start ab, da das Modul `vehicles.py` im Router-Verzeichnis nicht importiert werden konnte. | **Hoch** | **Behoben:** Fehlende Datei im Explorer ergänzt, Import-Pfade korrigiert. Der Server startet nun fehlerfrei im Auto-Reload-Modus. |
 | **BUG-02** | **CORS-Blockierung (Cross-Origin Request Blocked):** Das React-Frontend konnte keine API-Anfragen an das FastAPI-Backend senden, da die Browser-Sicherheitsrichtlinie Zugriffe blockierte. | **Kritisch** | **Behoben:** `CORSMiddleware` in der `main.py` des Backends integriert und die Origin `http://localhost:5173` explizit freigegeben. |
 | **BUG-03** | **Windows PowerShell Skript-Sperre:** Beim Versuch, das Frontend über `npm run dev` im VS-Code-Terminal zu starten, blockierte Windows das Ausführen mit einer `PSSecurityException`. | **Mittel** | **Behoben:** Das VS-Code-Standardterminal wurde von PowerShell auf die klassische Eingabeaufforderung (`cmd`) umgestellt, um die Execution-Policies zu umgehen. |</textarea>
-        </div>
-    </div>
-
-    <script>
-        const copyBtn = document.getElementById('copy-btn');
-        const textarea = document.getElementById('markdown-textarea');
-        const toast = document.getElementById('toast');
-
-        // Automatic copy to clipboard
-        copyBtn.addEventListener('click', () => {
-            navigator.clipboard.writeText(textarea.value).then(() => {
-                // Show success toast
-                toast.classList.remove('hidden');
-                
-                // Change button style temporarily
-                copyBtn.classList.remove('bg-blue-600', 'hover:bg-blue-700');
-                copyBtn.classList.add('bg-green-600');
-                copyBtn.innerHTML = '<i class="fa-solid fa-check"></i> <span>Kopiert!</span>';
-                
-                // Reset after 3 seconds
-                setTimeout(() => {
-                    toast.classList.add('hidden');
-                    copyBtn.classList.add('bg-blue-600', 'hover:bg-blue-700');
-                    copyBtn.classList.remove('bg-green-600');
-                    copyBtn.innerHTML = '<i class="fa-solid fa-copy"></i> <span>In die Zwischenablage kopieren</span>';
-                }, 3000);
-            }).catch(err => {
-                // If browser blocks clipboard, fall back to auto-selecting text
-                textarea.select();
-                alert('Automatisches Kopieren blockiert. Bitte wähle den Text im grauen Kasten manuell aus.');
-            });
-        });
-
-        // Quick select on click inside textarea
-        textarea.addEventListener('click', () => {
-            textarea.select();
-        });
-    </script>
+        
 </body>
 </html>
